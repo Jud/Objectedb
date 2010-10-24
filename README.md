@@ -11,7 +11,7 @@ Objectedb cures all of this by simplifying the DB down into distinct "Objects", 
 
 ## Show me some code, I still don't get it
 
-Creating an Object (a Product object in this case)
+###Creating an Object (a Product object in this case)
     <?php
         $product = new Product();
             $product->name	= 'Juds Laptop';
@@ -21,8 +21,9 @@ Creating an Object (a Product object in this case)
             $product->model	= '1';
         $product->save();
     ?>
+Note that none of the fields listed actually correspond with DB columns. Name, price, description, color, and model could have been called anything. The only thing you will need to define are the fields that you want indexed (aka searchable).
 
-How to look up an Object by an index.
+###How to look up an Object by an index.
     <?php
         $product = Product::findByModel(1);
     ?>
